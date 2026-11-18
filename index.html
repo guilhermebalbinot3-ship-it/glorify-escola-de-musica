@@ -482,7 +482,7 @@ document.querySelectorAll('.av').forEach(a=>{const v=a.querySelector('video');a.
 <script>
 (function(){
 // ===== FOTOS DO ÁLBUM: coloque os arquivos na pasta "fotos" e liste aqui =====
-const fotos=['01.jpg','02.jpg','03.jpg','04.jpg','05.jpg','06.jpg'];
+const fotos=Array.from({length:25},(_,i)=>String(i+1).padStart(2,'0')+'.jpg');
 const lb=document.getElementById('lb'),tr=document.getElementById('lbt'),n=document.getElementById('lbn');
 document.getElementById('acount').textContent=fotos.length+' fotos · toque para ver';
 tr.innerHTML=fotos.map(f=>'<div class="lbs"><img loading="lazy" src="fotos/'+f+'" alt="Foto do recital"></div>').join('');
